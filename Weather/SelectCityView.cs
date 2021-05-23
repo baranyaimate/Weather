@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -11,18 +12,14 @@ namespace Weather
 {
     public partial class Form1 : Form
     {
-        static readonly HttpClient client = new HttpClient();
+
         public Form1()
         {
             InitializeComponent();
-            DoubleBuffered = true;
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
-            //var responseString = await client.GetStringAsync("http://api.openweathermap.org/data/2.5/weather?q=pécs,hu&APPID=0079a590cd56c31ffb2f4105946aeb6f");
-            
-            //label1.Text = responseString;
             LoadCities();
         }
 
@@ -35,33 +32,35 @@ namespace Weather
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
+
+            listBox1.BackColor = Color.FromArgb(66, 134, 244);
         }
 
-        private async void LoadCities()
+        private void LoadCities()
         {
             StreamReader r = new StreamReader("C:/Users/mateb/Downloads/city.list.min.json");
             string jsonString = r.ReadToEnd();
             List<City> cityList = JsonConvert.DeserializeObject<List<City>>(jsonString);
-            for (int i = 0; i < cityList.Count; i++)
+            if (cityList != null)
             {
-                listBox1.Items.Add(cityList[i]);
+                for (int i = 0; i < cityList.Count; i++)
+                {
+                    listBox1.Items.Add(cityList[i]);
+                }
             }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listBox1.Items.Add(e);
-        }
-    }
-    
-    public class City
-    {
-        public string Name { get; set; }
-        public int Id { get; set; }
+            var form = Application.OpenForms.OfType<CityView>().FirstOrDefault();
+            if (form == null)
+            {
+                form = new CityView((City) listBox1.SelectedItem);
+                form.Show();
+            }
 
-        public override string ToString()
-        {
-            return Name;
+            form.Activate();
+            this.Hide();
         }
     }
 }
