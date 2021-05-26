@@ -71,7 +71,7 @@ namespace Weather
             this.backButton.Size = new System.Drawing.Size(80, 50);
             this.backButton.TabIndex = 2;
             this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.button1_Click);
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // weatherIcon
             // 
@@ -86,17 +86,20 @@ namespace Weather
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (192)))));
-            this.ClientSize = new System.Drawing.Size(1184, 661);
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (58)))), ((int) (((byte) (99)))));
+            this.ClientSize = new System.Drawing.Size(1194, 671);
             this.Controls.Add(this.weatherIcon);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.TempWeatherData);
             this.Controls.Add(this.CityNameLabel);
             this.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximizeBox = false;
             this.Name = "CityView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather";
             this.ResumeLayout(false);
         }
@@ -106,8 +109,6 @@ namespace Weather
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.Button backButton;
-
-        private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Label TempWeatherData;
 

@@ -50,6 +50,7 @@ namespace Weather
             // 
             // cityListBox
             // 
+            this.cityListBox.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (79)))), ((int) (((byte) (134)))));
             this.cityListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cityListBox.ForeColor = System.Drawing.Color.White;
             this.cityListBox.FormattingEnabled = true;
@@ -65,7 +66,7 @@ namespace Weather
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (0)))), ((int) (((byte) (192)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (58)))), ((int) (((byte) (99)))));
             this.ClientSize = new System.Drawing.Size(1194, 671);
             this.Controls.Add(this.cityListBox);
             this.Controls.Add(this.label2);
@@ -75,6 +76,7 @@ namespace Weather
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
