@@ -1,18 +1,58 @@
 [
     {
         "id": 3046526,
-        "name": "Pécs",
+        "name": "Pécs"
     },
     {
         "id": 3054638,
-        "name": "Budapest",
+        "name": "Budapest"
     },
     {
-        "id": 2761367,
-        "name": "Wien",
+        "id": 2643743,
+        "name": "London"
     },
-	{
-        "id": 3993763,
-        "name": "Palo Alto",
+    {
+        "id": 2950159,
+        "name": "Berlin"
+    },
+    {
+        "id": 3117735,
+        "name": "Madrid"
+    },
+    {
+        "id": 3169070,
+        "name": "Rome"
+    },
+    {
+        "id": 2988507,
+        "name": "Paris"
+    },
+    {
+        "id": 2761369,
+        "name": "Vienna"
+    },
+    {
+        "id": 3128760,
+        "name": "Barcelona"
+    },
+    {
+        "id": 1850147,
+        "name": "Tokyo"
+    },
+    {
+        "id": 1273294,
+        "name": "Delhi"
+    },
+    {
+        "id": 1796236,
+        "name": "Shanghai"
+    },
+    {
+        "id": 3448433,
+        "name": "São Paulo"
+    },
+    {
+        "id": 5202009,
+        "name": "Moscow"
     }
 ]

@@ -87,7 +87,6 @@ namespace Weather
             this.weatherIcon.Name = "weatherIcon";
             this.weatherIcon.Size = new System.Drawing.Size(280, 163);
             this.weatherIcon.TabIndex = 3;
-            this.weatherIcon.Text = "weatherIcon";
             // 
             // tempLabel
             // 
