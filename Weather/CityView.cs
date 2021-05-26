@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Globalization;
 using System.Net.Http;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
@@ -98,12 +97,12 @@ namespace Weather
         private void backButton_Click(object sender, EventArgs e)
         {
             new SelectCityView().Show();
-            this.Hide();
+            Hide();
         }
         
-        private DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        private static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
         {
-            DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0,System.DateTimeKind.Utc);
+            DateTime dtDateTime = new DateTime(1970,1,1,0,0,0,0, DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
         }

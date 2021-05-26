@@ -39,7 +39,7 @@ namespace Weather
             if (cityListBox.SelectedItem != null)
             {
                 new CityView((City) cityListBox.SelectedItem).Show();
-                this.Hide();
+                Hide();
             }
         }
 
