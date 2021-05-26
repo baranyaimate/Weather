@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -8,6 +9,7 @@ namespace Weather
 {
     public partial class SelectCityView : Form
     {
+        private List<City> _cityList;
         public SelectCityView()
         {
             InitializeComponent();
@@ -22,10 +24,10 @@ namespace Weather
         {
             StreamReader streamReader = new StreamReader(Application.StartupPath + @"..\..\..\res\city.list.r.json");
             string jsonString = streamReader.ReadToEnd();
-            List<City> cityList = JsonConvert.DeserializeObject<List<City>>(jsonString);
-            if (cityList != null)
+            _cityList = JsonConvert.DeserializeObject<List<City>>(jsonString);
+            if (_cityList != null)
             {
-                foreach (var city in cityList)
+                foreach (var city in _cityList)
                 {
                     cityListBox.Items.Add(city);
                 } 
@@ -38,6 +40,28 @@ namespace Weather
             {
                 new CityView((City) cityListBox.SelectedItem).Show();
                 this.Hide();
+            }
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            cityListBox.Items.Clear();
+
+            foreach (var city in _cityList) 
+            {
+                if (city.ToString().Contains(searchTextBox.Text, StringComparison.CurrentCultureIgnoreCase))
+                {
+                    cityListBox.Items.Add(city);
+                }
+            }
+        }
+
+        private void searchTextBox_Click(object sender, EventArgs e)
+        {
+            if (searchTextBox.Text.Equals("Search"))
+            {
+                searchTextBox.Text = "";
+                searchTextBox.ForeColor = Color.White;
             }
         }
     }

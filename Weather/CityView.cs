@@ -16,11 +16,6 @@ namespace Weather
             LoadWeatherData(city);
         }
 
-protected override void OnPaint(PaintEventArgs e)
-{
-    ControlPaint.DrawBorder(e.Graphics, ClientRectangle, Color.FromArgb(42, 111, 151), ButtonBorderStyle.Solid);
-}
-
         private async void LoadWeatherData(City city)
         {
             HttpClient client = new HttpClient();
@@ -34,8 +29,8 @@ protected override void OnPaint(PaintEventArgs e)
             windDataLabel.Text = Math.Round(float.Parse(weatherData.wind.speed.ToString())) + " km/h";
             visibilityDataLabel.Text = float.Parse(weatherData.visibility.ToString()) / 1000 + " km";
             pressureDataLabel.Text = weatherData.main.pressure.ToString() + " hPa";
-            sunriseDataLabel.Text = UnixTimeStampToDateTime(Double.Parse(weatherData.sys.sunrise.ToString())).ToString("HH:mm");
-            sunsetDataLabel.Text = UnixTimeStampToDateTime(Double.Parse(weatherData.sys.sunset.ToString())).ToString("HH:mm");
+            sunriseDataLabel.Text = UnixTimeStampToDateTime(double.Parse(weatherData.sys.sunrise.ToString())).ToString("HH:mm");
+            sunsetDataLabel.Text = UnixTimeStampToDateTime(double.Parse(weatherData.sys.sunset.ToString())).ToString("HH:mm");
 
             weatherIcon.Text = "";
             switch (weatherData.weather[0].icon.ToString())

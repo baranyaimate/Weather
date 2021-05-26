@@ -56,10 +56,11 @@ namespace Weather
             // CityNameLabel
             // 
             this.CityNameLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CityNameLabel.Font = new System.Drawing.Font("Quicksand", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.CityNameLabel.Location = new System.Drawing.Point(98, 9);
+            this.CityNameLabel.Font = new System.Drawing.Font("Quicksand", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.CityNameLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CityNameLabel.Location = new System.Drawing.Point(98, 0);
             this.CityNameLabel.Name = "CityNameLabel";
-            this.CityNameLabel.Size = new System.Drawing.Size(367, 53);
+            this.CityNameLabel.Size = new System.Drawing.Size(367, 64);
             this.CityNameLabel.TabIndex = 0;
             this.CityNameLabel.Text = "City name";
             this.CityNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -164,7 +165,7 @@ namespace Weather
             // 
             this.windDataLabel.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.windDataLabel.ForeColor = System.Drawing.Color.White;
-            this.windDataLabel.Location = new System.Drawing.Point(294, 330);
+            this.windDataLabel.Location = new System.Drawing.Point(296, 330);
             this.windDataLabel.Name = "windDataLabel";
             this.windDataLabel.Size = new System.Drawing.Size(117, 32);
             this.windDataLabel.TabIndex = 11;
@@ -175,7 +176,7 @@ namespace Weather
             this.visibilityLabel.BackColor = System.Drawing.Color.Transparent;
             this.visibilityLabel.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.visibilityLabel.ForeColor = System.Drawing.Color.White;
-            this.visibilityLabel.Location = new System.Drawing.Point(419, 199);
+            this.visibilityLabel.Location = new System.Drawing.Point(459, 199);
             this.visibilityLabel.Name = "visibilityLabel";
             this.visibilityLabel.Size = new System.Drawing.Size(127, 32);
             this.visibilityLabel.TabIndex = 14;
@@ -196,7 +197,7 @@ namespace Weather
             this.sunriseLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunriseLabel.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.sunriseLabel.ForeColor = System.Drawing.Color.White;
-            this.sunriseLabel.Location = new System.Drawing.Point(419, 288);
+            this.sunriseLabel.Location = new System.Drawing.Point(459, 288);
             this.sunriseLabel.Name = "sunriseLabel";
             this.sunriseLabel.Size = new System.Drawing.Size(116, 32);
             this.sunriseLabel.TabIndex = 16;
@@ -217,7 +218,7 @@ namespace Weather
             this.sunsetLabel.BackColor = System.Drawing.Color.Transparent;
             this.sunsetLabel.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.sunsetLabel.ForeColor = System.Drawing.Color.White;
-            this.sunsetLabel.Location = new System.Drawing.Point(419, 330);
+            this.sunsetLabel.Location = new System.Drawing.Point(459, 330);
             this.sunsetLabel.Name = "sunsetLabel";
             this.sunsetLabel.Size = new System.Drawing.Size(103, 32);
             this.sunsetLabel.TabIndex = 18;
@@ -238,7 +239,7 @@ namespace Weather
             this.pressureLabel.BackColor = System.Drawing.Color.Transparent;
             this.pressureLabel.Font = new System.Drawing.Font("Quicksand", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.pressureLabel.ForeColor = System.Drawing.Color.White;
-            this.pressureLabel.Location = new System.Drawing.Point(419, 245);
+            this.pressureLabel.Location = new System.Drawing.Point(459, 245);
             this.pressureLabel.Name = "pressureLabel";
             this.pressureLabel.Size = new System.Drawing.Size(127, 32);
             this.pressureLabel.TabIndex = 20;
@@ -299,8 +300,6 @@ namespace Weather
         private System.Windows.Forms.Label sunsetLabel;
         private System.Windows.Forms.Label sunsetDataLabel;
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
 
         private System.Windows.Forms.Label visibilityLabel;
         private System.Windows.Forms.Label visibilityDataLabel;
@@ -311,8 +310,6 @@ namespace Weather
         private System.Windows.Forms.Label humidityLabel;
 
         private System.Windows.Forms.Label humidityDataLabel;
-
-        private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.Label feelsLikeDataLabel;
         private System.Windows.Forms.Label feelsLikeLabel;
