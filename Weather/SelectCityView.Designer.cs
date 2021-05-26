@@ -2,7 +2,7 @@
 
 namespace Weather
 {
-    partial class Form1
+    partial class SelectCityView
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,7 +31,7 @@ namespace Weather
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectCityView));
             this.label2 = new System.Windows.Forms.Label();
             this.cityListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -39,7 +39,7 @@ namespace Weather
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Quicksand", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Font = new System.Drawing.Font("Quicksand", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(12, 47);
             this.label2.Name = "label2";
@@ -50,7 +50,7 @@ namespace Weather
             // 
             // cityListBox
             // 
-            this.cityListBox.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (79)))), ((int) (((byte) (134)))));
+            this.cityListBox.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (70)))), ((int) (((byte) (143)))), ((int) (((byte) (175)))));
             this.cityListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cityListBox.ForeColor = System.Drawing.Color.White;
             this.cityListBox.FormattingEnabled = true;
@@ -62,23 +62,24 @@ namespace Weather
             this.cityListBox.TabIndex = 3;
             this.cityListBox.SelectedIndexChanged += new System.EventHandler(this.cityListBox_SelectedIndexChanged);
             // 
-            // Form1
+            // SelectCityView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (1)))), ((int) (((byte) (58)))), ((int) (((byte) (99)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (42)))), ((int) (((byte) (111)))), ((int) (((byte) (151)))));
             this.ClientSize = new System.Drawing.Size(1194, 671);
             this.Controls.Add(this.cityListBox);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Quicksand", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "SelectCityView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Weather";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.SelectCityView_Load);
             this.ResumeLayout(false);
         }
 

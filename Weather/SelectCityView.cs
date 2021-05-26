@@ -6,22 +6,22 @@ using Newtonsoft.Json;
 
 namespace Weather
 {
-    public partial class Form1 : Form
+    public partial class SelectCityView : Form
     {
-        public Form1()
+        public SelectCityView()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void SelectCityView_Load(object sender, EventArgs e)
         {
             LoadCities();
         }
 
         private void LoadCities()
         {
-            StreamReader r = new StreamReader(Application.StartupPath + @"..\..\..\res\city.list.min.json");
-            string jsonString = r.ReadToEnd();
+            StreamReader streamReader = new StreamReader(Application.StartupPath + @"..\..\..\res\city.list.r.json");
+            string jsonString = streamReader.ReadToEnd();
             List<City> cityList = JsonConvert.DeserializeObject<List<City>>(jsonString);
             if (cityList != null)
             {
