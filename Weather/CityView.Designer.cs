@@ -84,9 +84,9 @@ namespace Weather
             // weatherIcon
             // 
             this.weatherIcon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.weatherIcon.Location = new System.Drawing.Point(800, 199);
+            this.weatherIcon.Location = new System.Drawing.Point(800, 127);
             this.weatherIcon.Name = "weatherIcon";
-            this.weatherIcon.Size = new System.Drawing.Size(280, 163);
+            this.weatherIcon.Size = new System.Drawing.Size(280, 320);
             this.weatherIcon.TabIndex = 3;
             // 
             // tempLabel

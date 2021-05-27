@@ -45,14 +45,17 @@ namespace Weather
 
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
-            cityListBox.Items.Clear();
-
-            foreach (var city in _cityList) 
+            if (searchTextBox.Text.Length > 1)
             {
-                if (city.ToString().Contains(searchTextBox.Text, StringComparison.CurrentCultureIgnoreCase))
+                cityListBox.Items.Clear();
+
+                foreach (var city in _cityList) 
                 {
-                    cityListBox.Items.Add(city);
-                }
+                    if (city.ToString().Contains(searchTextBox.Text, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        cityListBox.Items.Add(city);
+                    }
+                }   
             }
         }
 
